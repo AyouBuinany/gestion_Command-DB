@@ -1,6 +1,6 @@
-create database Gestion_Commande
+create database Gestion_Commande;
 
-use Gestion_Commande
+use Gestion_Commande;
 
 /*==============================================================*/
 /* Table : Client                                               */
@@ -16,12 +16,12 @@ create table Client
 );
 
 /*Show table*/
-select * from Client
+select * from Client;
 
 /*Add*/
-insert into Client values(default,'ayoub',0654218549,'50 street Nor',15)
-insert into Client values(default,'ahmed',0654218599,'11 street Nor',12)
-insert into Client values(default,'reda',0680214562,'50 street Nor',18)
+insert into Client values(default,'ayoub',0654218549,'50 street Nor',15);
+insert into Client values(default,'ahmed',0654218599,'11 street Nor',12);
+insert into Client values(default,'reda',0680214562,'50 street Nor',18);
 
 /*update*/
 update Client set NameCl='jawhar'
@@ -32,7 +32,7 @@ delete from Client
 where CreditcardCl=18;
 
 /*delete table or (clear)*/
-drop table Client
+drop table Client;
 
 /*==============================================================*/
 /* Table : CommandeLine                                         */
@@ -45,9 +45,9 @@ create table CommandeLine
    primary key (Id)
 );
 
-select * from CommandeLine
-insert into CommandeLine values(1,1000,'63 street 9or')
-insert into CommandeLine values(2,39.1,'30 street')
+select * from CommandeLine;
+insert into CommandeLine values(1,1000,'63 street 9or');
+insert into CommandeLine values(2,39.1,'30 street');
 
 /*==============================================================*/
 /* Table : "Order"                                              */
@@ -59,16 +59,16 @@ create table orders
 ,primary key(IdC)
 );
 /*Ajouter les donners*/
-insert into orders values(1,default)
-insert into orders values(2,default)
+insert into orders values(1,default);
+insert into orders values(2,default);
 /* afficher les informations*/
-select * from orders
+select * from orders;
 
 /* MODIFIER LES INFIRMATIONS DE TABLE ORDERS WHERE IdC=2 and IdC =1*/
-update orders set DateC='2010/10/12 13:20:15 ' where IdC=1
-update orders set DateC='2020-09-12 13:20:15 ' where IdC=2
+update orders set DateC='2010/10/12 13:20:15 ' where IdC=1;
+update orders set DateC='2020-09-12 13:20:15 ' where IdC=2;
 /*supprimer table orders*/
-drop table orders
+drop table orders;
 /*==============================================================*/
 /* Table : Product                                              */
 /*==============================================================*/
@@ -82,15 +82,15 @@ primary key(Id)
 );
 
 /* supprimer table product*/
-drop table Product
-insert into Product values(1,'Ahmed',default,12.4)
-insert into Product(Id,nom,Q_Stock) values(2,'Ahmed',12.4)
+drop table Product;
+insert into Product values(1,'Ahmed',default,12.4);
+insert into Product(Id,nom,Q_Stock) values(2,'Ahmed',12.4);
 /*affichage table Product*/
-select * from Product
+select * from Product;
 /* update table product*/
 
-update Product set nom ='jawhar' , Q_Stock=Id*10/2  where Id=1
-update Product set nom ='REDA' , Q_Stock=208.8  where Id=2
+update Product set nom ='jawhar' , Q_Stock=Id*10/2  where Id=1;
+update Product set nom ='REDA' , Q_Stock=208.8  where Id=2;
 /* create user */
 create user 'user1' identified by   'youcode';
 grant all on *.* to 'user1';
